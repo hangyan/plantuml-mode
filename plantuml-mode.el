@@ -34,7 +34,7 @@
   "Major mode for editing plantuml file."
   :group 'languages)
 
-(defvar plantuml-jar-path (expand-file-name "~/plantuml.jar"))
+(defvar plantuml-jar-path (expand-file-name "~/Project/plantuml.jar"))
 
 (defvar plantuml-mode-hook nil "Standard hook for plantuml-mode.")
 
@@ -107,7 +107,7 @@
   (unless (file-exists-p plantuml-jar-path)
     (error "Could not find plantuml.jar at %s" plantuml-jar-path))
   (with-temp-buffer
-    (shell-command (plantuml-render-command "-language" current-buffer))
+    (shell-command (plantuml-render-command "-language" (buffer-name (current-buffer))) t)
     (goto-char (point-min))
     (let ((found (search-forward ";" nil t))
           (word "")

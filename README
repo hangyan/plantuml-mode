@@ -1,15 +1,5 @@
+## Major Mode for Plantuml
 
-* Introduction
+Forked from [zwz/plantuml-mode](https://github.com/zwz/plantuml-mode)
 
-This is a major mode for plantuml(http://plantuml.sourceforge.net/)
-
-Plantuml is an open-source tool in java that allows to quickly write :
-    - sequence diagram,
-    - use case diagram,
-    - class diagram,
-    - activity diagram,
-    - component diagram,
-    - state diagram
-    - object diagram
-
-using a simple and intuitive language.
+Fixed some bugs and remove the annoning `Shell Command Output` buffer.
